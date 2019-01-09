@@ -1,0 +1,62 @@
+.footer{
+
+  hr{
+    width: 300px;
+    // min-width: ;
+    margin: 20px auto 0 auto;
+    padding-top: 5px;
+    background-color:$charcoal;
+    border-radius: 5px;
+    @mixin small {
+      width: 320px;
+    }
+  }
+
+  &__wrapper{
+    width: 320px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+
+  &__icons{
+    padding-top: 30px;
+    justify-self: center;
+  }
+  &__igram{
+    cursor: pointer;
+    circle {
+      fill: $charcoal ;
+      stroke: white;
+      transition: all .4s ease;
+    }
+    g > path {
+      fill: $charcoal;
+      stroke: white;
+      stroke-width: 1;
+      transition: all .4s ease;
+
+    }
+    &:hover{
+      circle {
+        fill: white ;
+        stroke: $charcoal;
+      }
+      g > path {
+        fill: white;
+        stroke: $charcoal;
+        stroke-opacity: 1;
+        stroke-width: 3;
+      }
+    }
+  }
+  &__email{
+    padding-top: 30px;
+    color: $charcoal;
+    font-size: .85rem;
+    font-weight: bold;
+    @mixin small {
+      font-size: .9rem;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  width: 100%;
+  margin: 0; }
+
+html {
+  width: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+.coming-soon {
+  background: #434343;
+  height: 80vh;
+  width: 100%; }
+  .coming-soon__title {
+    padding-top: 120px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: white; }
+  .coming-soon__logo {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    text-align: center;
+    margin: 0 auto; }
+    .coming-soon__logo img {
+      max-width: 500px;
+      width: 100%;
+      padding: 0 10px; }
+
+.footer hr {
+  width: 300px;
+  margin: 20px auto 0 auto;
+  padding-top: 5px;
+  background-color: #434343;
+  border-radius: 5px; }
+
+.footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% 70%; }
+
+.footer__icons {
+  padding-top: 30px;
+  justify-self: center; }
+
+.footer__igram {
+  cursor: pointer; }
+  .footer__igram circle {
+    fill: #434343;
+    stroke: white;
+    transition: all .4s ease; }
+  .footer__igram g > path {
+    fill: #434343;
+    stroke: white;
+    stroke-width: 1;
+    transition: all .4s ease; }
+  .footer__igram:hover circle {
+    fill: white;
+    stroke: #434343; }
+  .footer__igram:hover g > path {
+    fill: white;
+    stroke: #434343;
+    stroke-opacity: 1;
+    stroke-width: 3; }
+
+.footer__email {
+  padding-top: 30px;
+  color: #434343;
+  font-size: .85rem;
+  font-weight: bold; }
+
