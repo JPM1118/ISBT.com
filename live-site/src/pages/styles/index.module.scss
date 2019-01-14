@@ -1,0 +1,26 @@
+@import './../../utils/variables.scss';
+
+
+.container{
+  background: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3)), url('./../../img/apartment-architecture-art-276724.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: $body-height;
+  height: $body-height;
+ 
+    h1{
+      font-size: 2.8rem;
+      padding-top: 240px;
+      margin: 0 auto;
+      color: white;
+      max-width: 500px;
+    }
+  }
+
+  
+  
+
+  
+

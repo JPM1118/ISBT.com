@@ -1,0 +1,101 @@
+@import '../../utils/variables.scss';
+
+.footer{
+  background-color: $charcoal;
+  height: $footer-height;
+  color: white;
+  padding: 10px auto;
+}
+.wrapper{
+  width: 100%;
+  max-width: 600px;
+  height: $footer-height;
+  margin:0 auto;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-column-gap: 2px;
+}
+
+.icons{
+  // padding-top: 30px;
+  justify-self: center;
+  height: 35px;
+  display: grid;
+  align-self: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.igram{
+  display: inline-block;
+  cursor: pointer;
+  circle {
+    fill: white ;
+    stroke: $charcoal;
+    transition: all .4s ease;
+  }
+  g > path {
+    fill: white ;
+    stroke: $charcoal;
+    stroke-width: 1;
+    transition: all .4s ease;
+
+  }
+  &:hover{
+    circle {
+      fill: $charcoal ;
+      stroke: white;
+    }
+    g > path {
+      fill: $charcoal ;
+      stroke: white;
+      stroke-opacity: 1;
+      stroke-width: 3;
+    }
+  }
+}
+.linkedin{
+  display: inline-block;
+  cursor: pointer;
+  circle {
+    fill: white ;
+    stroke: $charcoal;
+    transition: all .4s ease;
+  }
+  g > path {
+    fill: white ;
+    stroke: $charcoal;
+    stroke-width: 1;
+    transition: all .4s ease;
+
+  }
+  &:hover{
+    circle {
+      fill: $charcoal ;
+      stroke: white;
+    }
+    g > path {
+      fill: $charcoal ;
+      stroke: white;
+      stroke-opacity: 1;
+      stroke-width: 3;
+    }
+  }
+}
+.email{
+  border-right:2px solid white;
+  border-left:2px solid white;
+  height: 35px;
+  padding: 2px 25px;
+  align-self: center;
+  justify-self: center;
+  font-size: 1rem;
+  // font-weight: bold;
+  @mixin small {
+  font-size: 1rem;
+  }
+}
+
+.territories{
+  justify-self:center;
+  align-self: center;
+}

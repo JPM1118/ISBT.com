@@ -1,0 +1,7 @@
+$charcoal: #464646;
+
+$header-height: 75px;
+
+$footer-height: 50px;
+
+$body-height: unquote('calc(100vh - #{$footer-height} - #{$header-height})');

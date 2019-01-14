@@ -19,7 +19,9 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-typography": "^0.16.18",
-    "typography": "^0.16.18"
+    "typography": "^0.16.18",
+    "typography-theme-github": "^0.16.18",
+    "typography-theme-judah": "^0.16.18"
   },
   "repository": {
     "type": "git",
