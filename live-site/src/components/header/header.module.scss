@@ -4,7 +4,9 @@
   background-color: $charcoal;
   height: $header-height;
   display:grid;
-  grid-template: 100% / 50% 50%;
+  grid-template: 100% / 100%;
+  position: relative;
+  z-index: 1;
 
   img{
     // display: block;
@@ -12,17 +14,81 @@
     max-width:200px;
   }
 }
+.gridContainer{
+  width: 250px;
+  display: grid;
+  grid-template: 100% / 80% 20%;
+}
+@media screen and (min-width: 700px){
+  .header{
+    background-color: $charcoal;
+    height: $header-height;
+    display:grid;
+    grid-template: 100% / 50% 50%;
+  
+    img{
+      // display: block;
+      width: 100%;
+      max-width:200px;
+    }
+  }
+}
 
 .imgContainer{
   display: inline-block;
   align-self: center;
+  width: 200px;
   padding-top: 10px;
   padding-left: 10px;
 }
 
+.navToggle{
+  display: inline-block;
+  width: 24px;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+  img {
+    width: 24px;
+  }
+}
+@media screen and (min-width: 700px){
+  .navToggle{
+    display: none;
+  }
+}
+.linkGroup{
+  align-self: center;
+  justify-self: start;
+  list-style: none;
+  display: none;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 0;
+  text-align: center;
+  background-color: $charcoal;
+  li{
+    color: white;
+    display: block;
+    margin-right: 1.2rem;
+    a {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      border-bottom: 2px $charcoal solid;
+
+      &:hover{
+        border-bottom: 2px white solid;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px){
 .linkGroup{
   align-self: center;
   list-style: none;
+  display: inline-block;
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
@@ -43,4 +109,4 @@
     }
   }
 }
-
+}

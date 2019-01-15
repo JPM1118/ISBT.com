@@ -1,0 +1,68 @@
+@import './../../utils/variables.scss';
+
+.container {
+  height: $body-height;
+  overflow: scroll;
+  color: $charcoal;
+    
+  h1{
+      margin: 0 auto;
+      text-align: center;
+    }
+  label,input,textarea{
+    display: block;
+    width: 95%;
+    padding-top: 15px;
+  }
+  label{
+    
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-left: 2px;
+    padding-bottom: 10px;
+    // margin-bottom: 20px;
+  }
+  textarea{
+    height: 150px;
+  }
+  input,textarea{
+    padding: 5px;
+    margin: 0 auto;
+  }
+  button{
+    margin: 15px auto 0 auto;
+    width: 100px;
+    display: block;
+    cursor: pointer;
+    border: 2px solid $charcoal;
+    background-color: $charcoal;
+    color: white;
+    transition: all .3s ease-in;
+    &:hover{
+      background-color: white;
+      color: $charcoal;
+    }
+  }
+  textarea:focus, input:focus{
+    outline: none;
+    border-color: $charcoal;
+    box-shadow: 0 0 10px $charcoal;
+  }
+}
+
+.main{
+  overflow: auto;
+  position: relative;
+  top: 0%;
+  transform: translateY(0%);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media screen and(min-width: 700px){
+  .main{
+    top: 30%;
+    transform: translateY(-40%);
+    width: 100%;
+  }
+}

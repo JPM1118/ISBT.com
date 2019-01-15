@@ -1,0 +1,6 @@
+@import './../../utils/variables.scss';
+
+.container {
+  height: $body-height;
+  overflow: auto;
+}

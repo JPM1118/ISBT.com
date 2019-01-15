@@ -85,12 +85,13 @@
   border-right:2px solid white;
   border-left:2px solid white;
   height: 35px;
-  padding: 2px 25px;
+  padding: 5px 11px;
   align-self: center;
   justify-self: center;
-  font-size: 1rem;
+  font-size: .8rem;
   // font-weight: bold;
-  @mixin small {
+  @media screen and (min-width: 700px) {
+  padding: 2px 25px;
   font-size: 1rem;
   }
 }

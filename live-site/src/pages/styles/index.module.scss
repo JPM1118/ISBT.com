@@ -9,15 +9,39 @@
   background-attachment: fixed;
   height: $body-height;
   height: $body-height;
- 
+
     h1{
-      font-size: 2.8rem;
-      padding-top: 240px;
+      position: relative;
+      font-size: 2rem;
+      padding-left: 10px;
+      transform: translateY(-60%);
+      top: 50%;
       margin: 0 auto;
       color: white;
       max-width: 500px;
+      animation: slideIn 1s 1 normal ;
     }
-  }
+
+    @keyframes slideIn {
+      0% {font-size: 1.9rem;}
+      100% {font-size: 2rem;}
+    }
+    @media screen and (min-width: 700px){
+      // padding-top: 240px; 
+      h1{ 
+      position: relative;
+      top: 40%;
+      padding-left: 0;
+      font-size: 2.7rem;
+     }
+     @keyframes slideIn {
+      0% {font-size: 2.5rem;}
+      100% {font-size: 2.7rem;}
+    }
+    }
+
+    
+}
 
   
   
