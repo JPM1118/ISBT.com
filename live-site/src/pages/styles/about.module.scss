@@ -4,3 +4,54 @@
   height: $body-height;
   overflow: auto;
 }
+
+.hero{
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.4)), url('./../../img/roberto-lopez-541178-unsplash.jpg');
+  background-size: cover;
+  // background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  position: relative;
+
+  h1{
+    position: static;
+    // top: 40%;
+    // left: 15%;
+    margin: 0 auto;
+    padding-top: 40%;
+    font-size: 3rem;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    font-weight: 300;
+  }
+
+  @media screen and (min-width: 700px) {
+    h1{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    // left: 15%;
+    font-size: 3.5rem;
+    margin: 0 auto;
+    padding-top: 0;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    font-weight: 300;
+  }
+  } 
+}
+
+.aboutBody{
+  width: 95%;
+  max-width: 600px;
+  margin: 20px auto;
+
+  @media screen and (min-width: 700px){
+    width: 95%;
+    max-width: 600px;
+    margin: 60px auto;
+  }
+}

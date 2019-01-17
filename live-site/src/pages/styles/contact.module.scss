@@ -2,13 +2,14 @@
 
 .container {
   height: $body-height;
-  overflow: scroll;
+  overflow: auto;
   color: $charcoal;
     
   h1{
       margin: 0 auto;
       text-align: center;
     }
+
   label,input,textarea{
     display: block;
     width: 95%;
@@ -41,6 +42,7 @@
     &:hover{
       background-color: white;
       color: $charcoal;
+      font-weight: 500;
     }
   }
   textarea:focus, input:focus{
@@ -59,10 +61,15 @@
   max-width: 600px;
   margin: 0 auto;
 }
+
 @media screen and(min-width: 700px){
   .main{
-    top: 30%;
+    top: 40%;
     transform: translateY(-40%);
     width: 100%;
   }
+}
+
+.name{
+  padding-top: 60px;
 }
