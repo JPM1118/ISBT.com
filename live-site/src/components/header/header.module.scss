@@ -1,40 +1,40 @@
 @import './../../utils/variables.scss';
 
-.header{
+.header {
   background-color: $charcoal;
   height: $header-height;
-  display:grid;
+  display: grid;
   grid-template: 100% / 100%;
   position: relative;
   z-index: 1;
 
-  img{
+  img {
     // display: block;
     width: 100%;
-    max-width:200px;
+    max-width: 200px;
   }
 }
-.gridContainer{
+.gridContainer {
   width: 250px;
   display: grid;
   grid-template: 100% / 80% 20%;
 }
-@media screen and (min-width: 700px){
-  .header{
+@media screen and (min-width: 700px) {
+  .header {
     background-color: $charcoal;
     height: $header-height;
-    display:grid;
+    display: grid;
     grid-template: 100% / 50% 50%;
-  
-    img{
+
+    img {
       // display: block;
       width: 100%;
-      max-width:200px;
+      max-width: 200px;
     }
   }
 }
 
-.imgContainer{
+.imgContainer {
   display: inline-block;
   align-self: center;
   width: 200px;
@@ -42,7 +42,7 @@
   padding-left: 10px;
 }
 
-.navToggle{
+.navToggle {
   display: inline-block;
   width: 24px;
   justify-self: center;
@@ -52,12 +52,12 @@
     width: 24px;
   }
 }
-@media screen and (min-width: 700px){
-  .navToggle{
+@media screen and (min-width: 700px) {
+  .navToggle {
     display: none;
   }
 }
-.linkGroup{
+.linkGroup {
   align-self: center;
   justify-self: start;
   list-style: none;
@@ -67,7 +67,7 @@
   margin: 0 0;
   text-align: center;
   background-color: $charcoal;
-  li{
+  li {
     color: white;
     display: block;
     margin-right: 1.2rem;
@@ -78,36 +78,36 @@
       padding-bottom: 5px;
       border-bottom: 2px $charcoal solid;
 
-      &:hover{
+      &:hover {
         border-bottom: 2px white solid;
       }
     }
   }
 }
 
-@media screen and (min-width: 700px){
-.linkGroup{
-  align-self: center;
-  list-style: none;
-  display: inline-block;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  li{
-    color: white;
+@media screen and (min-width: 700px) {
+  .linkGroup {
+    align-self: center;
+    list-style: none;
     display: inline-block;
-    margin-right: 1.2rem;
-    a {
-      text-decoration: none;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    li {
       color: white;
-      cursor: pointer;
-      border-bottom: 2px $charcoal solid;
+      display: inline-block;
+      margin-right: 1.2rem;
+      a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        border-bottom: 2px $charcoal solid;
 
-      &:hover{
-        border-bottom: 2px white solid;
+        &:hover {
+          border-bottom: 2px white solid;
+        }
       }
     }
   }
-}
 }

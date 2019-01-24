@@ -4,33 +4,40 @@
   height: $body-height;
   overflow: auto;
   color: $charcoal;
-    
-  h1{
-      margin: 0 auto;
-      text-align: center;
-    }
 
-  label,input,textarea{
+  h1 {
+    padding-top: 10px;
+    margin: 10px auto;
+    text-align: center;
+  }
+  div {
+    // margin: 10px auto;
+  }
+
+  label,
+  input,
+  textarea {
     display: block;
     width: 95%;
-    padding-top: 15px;
+    // padding-top: 15px;
   }
-  label{
-    
+  label {
     font-weight: 500;
     font-size: 1.2rem;
     padding-left: 2px;
-    padding-bottom: 10px;
-    // margin-bottom: 20px;
+    // padding-bottom: 10px;
+    margin-bottom: 20px;
   }
-  textarea{
+  textarea {
     height: 150px;
   }
-  input,textarea{
+  input,
+  textarea {
+    border: 1px solid rgba(70, 70, 70, 0.4);
     padding: 5px;
-    margin: 0 auto;
+    margin: 10px auto;
   }
-  button{
+  button {
     margin: 15px auto 0 auto;
     width: 100px;
     display: block;
@@ -38,38 +45,39 @@
     border: 2px solid $charcoal;
     background-color: $charcoal;
     color: white;
-    transition: all .3s ease-in;
-    &:hover{
+    transition: all 0.3s ease-in;
+    &:hover {
       background-color: white;
       color: $charcoal;
       font-weight: 500;
     }
   }
-  textarea:focus, input:focus{
+  textarea:focus,
+  input:focus {
     outline: none;
     border-color: $charcoal;
     box-shadow: 0 0 10px $charcoal;
   }
 }
 
-.main{
+.main {
   overflow: auto;
   position: relative;
   top: 0%;
   transform: translateY(0%);
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
-@media screen and(min-width: 700px){
-  .main{
-    top: 40%;
-    transform: translateY(-40%);
+@media screen and(min-width: 700px) {
+  .main {
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
   }
 }
 
-.name{
-  padding-top: 60px;
+.name {
+  // padding-top: 60px;
 }
