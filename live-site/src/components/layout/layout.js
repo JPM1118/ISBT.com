@@ -14,7 +14,10 @@ const ListLink = props => (
 export default ({ children }) => (
   <div className={layoutStyles.container}>
     <Header ListLink={ListLink} />
-    {children}
-    <Footer />
+    {
+      children
+    }
+      <Footer />    
+
   </div>
 )

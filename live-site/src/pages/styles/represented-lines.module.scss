@@ -1,8 +1,8 @@
 @import './../../utils/variables.scss';
 
 .container {
-  height: $body-height;
-  overflow: auto;
+  min-height: $body-height;
+  padding-bottom: 30px;
 }
 
 .header {
@@ -22,32 +22,32 @@
     padding: 5px 0;
   }
 }
-.focused{
+.focused {
   border-bottom: 2px $charcoal solid;
 }
-.display{
+.display {
   display: block;
-} 
-.noDisplay{
-    display: none;
 }
-.subFocused{
+.noDisplay {
+  display: none;
+}
+.subFocused {
   border-bottom: 2px $charcoal solid;
 }
-.subNotFocused{
+.subNotFocused {
   border-bottom: 2px white solid;
 }
-.castelSubs{
+.castelSubs {
   width: 100%;
   text-align: center;
   padding-top: 20px;
-  ul{
+  ul {
     align-self: center;
     list-style: none;
     display: inline-block;
     li {
       position: relative;
-      font-size: .9rem;
+      font-size: 0.9rem;
       color: $charcoal;
       display: inline-block;
       margin-right: 1.2rem;
@@ -56,15 +56,14 @@
     }
   }
 }
-  
+
 @media screen and (min-width: 600px) {
   .header {
     align-self: center;
     list-style: none;
     display: inline-block;
     width: 100%;
-    // max-width: 500px;
-    padding: 70px 0;
+    padding: 70px 0 20px 0;
     margin: 0 auto;
     text-align: center;
     li {
@@ -76,30 +75,28 @@
       cursor: pointer;
       border-bottom: 2px white solid;
       text-decoration: none;
-
     }
-
   }
-  
-  .focused{
-    &:after{
+
+  .focused {
+    &:after {
       content: '';
       width: 0;
       height: 0;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-top: 10px solid $charcoal;
-      content: " ";
+      content: ' ';
       position: absolute;
       bottom: -15px;
       left: calc(50% - 10px);
     }
   }
-  .castelSubs{
+  .castelSubs {
     width: 100%;
     text-align: center;
     padding-top: 20px;
-    ul{
+    ul {
       align-self: center;
       list-style: none;
       display: inline-block;
@@ -110,15 +107,15 @@
         display: inline-block;
         margin-right: 1.2rem;
         cursor: pointer;
-        text-decoration: none;       
+        text-decoration: none;
       }
     }
   }
 }
 
 @media screen and (min-width: 700px) {
-  .header{
-    li{
+  .header {
+    li {
       font-size: 1.3rem;
       margin-right: 1.5rem;
     }

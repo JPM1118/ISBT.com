@@ -1,37 +1,37 @@
-.container{
+.container {
   position: relative;
-  width: 100%;
+  width: 85%;
   max-width: 1200px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .imgSlide {
   width: 100%;
-  // max-width: 1000px;
   margin: 0 auto;
 }
 
-.arrowLeft, .arrowRight {
+.arrowLeft,
+.arrowRight {
   position: absolute;
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  > img{
+  > img {
     width: 45px;
     height: 45px;
   }
 }
 
-.arrowLeft{
-  left:5px;
-  &:active{
-    left:3px;
+.arrowLeft {
+  left: 5px;
+  &:active {
+    left: 3px;
   }
 }
 
-.arrowRight{
+.arrowRight {
   right: 5px;
-  &:active{
+  &:active {
     right: 3px;
   }
 }

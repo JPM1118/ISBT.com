@@ -1,31 +1,25 @@
 @import './../../utils/variables.scss';
 
 .container {
-  height: $body-height;
-  overflow: auto;
+  min-height: $body-height;
   color: $charcoal;
+  position: relative;
 
   h1 {
     padding-top: 10px;
     margin: 10px auto;
     text-align: center;
   }
-  div {
-    // margin: 10px auto;
-  }
-
   label,
   input,
   textarea {
     display: block;
     width: 95%;
-    // padding-top: 15px;
   }
   label {
     font-weight: 500;
     font-size: 1.2rem;
     padding-left: 2px;
-    // padding-bottom: 10px;
     margin-bottom: 20px;
   }
   textarea {
@@ -62,9 +56,6 @@
 
 .main {
   overflow: auto;
-  position: relative;
-  top: 0%;
-  transform: translateY(0%);
   width: 100%;
   max-width: 600px;
   margin: 10px auto;
@@ -72,12 +63,10 @@
 
 @media screen and(min-width: 700px) {
   .main {
-    top: 50%;
-    transform: translateY(-50%);
+    overflow: auto;
+    position: relative;
     width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
   }
-}
-
-.name {
-  // padding-top: 60px;
 }
