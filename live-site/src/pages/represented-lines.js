@@ -15,13 +15,13 @@ export default class extends Component {
   handleClick = event => {
     event.target.id === 'castel'
       ? this.setState({
-          focusedElement: event.target.id,
-          showSubElements: true
-        })
+        focusedElement: event.target.id,
+        showSubElements: true
+      })
       : this.setState({
-          focusedElement: event.target.id,
-          showSubElements: false
-        });
+        focusedElement: event.target.id,
+        showSubElements: false
+      });
   };
 
   handleSubClick = event => {
@@ -44,7 +44,9 @@ export default class extends Component {
         : repLineStyles.subNotFocused;
     const focus = id =>
       this.state.focusedElement === id ? repLineStyles.focused : null;
-
+    const designer = this.state.showSubElements
+      ? this.state.focusedSubElement
+      : this.state.focusedElement
     return (
       <Layout>
         <div className={repLineStyles.container}>
@@ -100,7 +102,7 @@ export default class extends Component {
               </ul>
             </div>
           </div>
-          <Carousel image={this.props.data[this.handleImgRequest()].edges} />
+          <Carousel designer={designer} image={this.props.data[this.handleImgRequest()].edges} />
         </div>
       </Layout>
     );

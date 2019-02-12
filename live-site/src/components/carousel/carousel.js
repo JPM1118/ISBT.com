@@ -17,7 +17,6 @@ export default class carousel extends Component {
     const resetIndex = currentIndex === 0;
     const index = resetIndex ? lastIndex : currentIndex - 1;
 
-    // debugger;
     this.setState({
       currentIndex: index
     })
@@ -32,6 +31,25 @@ export default class carousel extends Component {
       currentIndex: index
     })
   }
+
+  designerLink = () => {
+    let { designer } = this.props
+    switch (designer) {
+      case 'castel':
+        return 'https://www.castelmaison.com/shop/fabric/sale/castel-maison';
+      case 'guellLamadrid':
+        return 'https://www.castelmaison.com/shop/fabric/sale/guell-lamadrid';
+      case 'lcdlm':
+        return 'https://www.castelmaison.com/shop/fabric/sale/les-creations-de-lamadrid'
+      case 'studio':
+        return 'http://www.studioart.it/en';
+      case 'aesthetics':
+        return 'https://www.aestheticswall.com/'
+      default:
+        return null;
+    }
+  }
+
   render() {
     return (
       <div className={carouselStyles.container}>
@@ -40,6 +58,9 @@ export default class carousel extends Component {
           onClick={this.previousSlide}
         >
           <img src={leftArrow} alt="previous slide" />
+        </div>
+        <div className={carouselStyles.link}>
+          <a href={this.designerLink()}>Link</a>
         </div>
         <div className={carouselStyles.imgSlide}>
           <Img fluid={this.props.image[this.state.currentIndex].node.childImageSharp.fluid} />
