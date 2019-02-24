@@ -1,4 +1,4 @@
-@import './../../utils/variables.scss';
+@import '../../utils/variables.scss';
 
 .container {
   min-height: $body-height;
@@ -18,15 +18,13 @@
     position: relative;
     top: 40%;
     transform: translateY(-50%);
-    // left: 15%;
     background: rgba(0, 0, 0, 0.2);
     text-align: center;
     margin: 0 auto;
     padding: 10px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
     width: 100%;
-    // max-width: 400px;
     font-weight: 300;
   }
 
@@ -35,13 +33,12 @@
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      // left: 15%;
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin: 0 auto;
       padding-top: 0;
       color: white;
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
       font-weight: 300;
     }
   }
@@ -49,12 +46,26 @@
 
 .aboutBody {
   width: 95%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 20px auto;
-
+  color: $charcoal;
+  h2{
+  border-bottom: 2px solid $charcoal;
+  padding-bottom: 10px;
+  }
+  p{
+    padding-top: 20px;
+  }
   @media screen and (min-width: 700px) {
     width: 95%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 60px auto;
+    color: $charcoal;
+    h2{
+      font-size: 1.8rem;
+    }
+    p{
+      font-size: 1.2rem;
+    }
   }
 }

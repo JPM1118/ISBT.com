@@ -113,7 +113,7 @@ export const fluidImage = graphql`
     edges {
       node {
         childImageSharp {
-          fluid(maxWidth: 1200, maxHeight: 600) {
+          fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -135,7 +135,7 @@ export const carouselQuery = graphql`
     studio: allFile(filter: { name: { regex: "/^sa[1-3]/" } }) {
       ...fluidImage
     }
-    aesthetics: allFile(filter: { name: { regex: "/^aw[1-3]/" } }) {
+    aesthetics: allFile(filter: { name: { regex: "/^aw/" } }) {
       ...fluidImage
     }
   }

@@ -51,25 +51,35 @@ export default class carousel extends Component {
   }
 
   render() {
+    const { image } = this.props
+    const renderArrows = () => {
+      console.log(image.length)
+      return image.length > 1
+    }
     return (
       <div className={carouselStyles.container}>
-        <div
-          className={carouselStyles.arrowLeft}
-          onClick={this.previousSlide}
-        >
-          <img src={leftArrow} alt="previous slide" />
-        </div>
-        <div className={carouselStyles.link}>
-          <a href={this.designerLink()}>Link</a>
-        </div>
+        {renderArrows()
+          ? <React.Fragment>
+            <div
+              className={carouselStyles.arrowLeft}
+              onClick={this.previousSlide}
+            >
+              <img src={leftArrow} alt="previous slide" />
+            </div>
+            <div
+              className={carouselStyles.arrowRight}
+              onClick={this.nextSlide}
+            >
+              <img src={rightArrow} alt="next slide" />
+            </div>
+          </React.Fragment>
+          : null
+        }
         <div className={carouselStyles.imgSlide}>
           <Img fluid={this.props.image[this.state.currentIndex].node.childImageSharp.fluid} />
         </div>
-        <div
-          className={carouselStyles.arrowRight}
-          onClick={this.nextSlide}
-        >
-          <img src={rightArrow} alt="next slide" />
+        <div className={carouselStyles.link}>
+          <a href={this.designerLink()}>Link</a>
         </div>
       </div>
     )

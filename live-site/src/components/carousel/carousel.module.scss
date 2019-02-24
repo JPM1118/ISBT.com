@@ -1,3 +1,5 @@
+@import '../../utils/variables.scss';
+
 .container {
   position: relative;
   width: 85%;
@@ -37,20 +39,21 @@
 }
 
 .link{
-  position: absolute;
-  width: 35px;
-  z-index: 1;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  // position: absolute;
+  width: 50px;
+  // z-index: 1;
+  // bottom: 15px;
+  // left: 50%;
+  // transform: translateX(-50%);
+  margin: 10px auto;
   text-decoration: none;
 
   a{
-  color: white;
-  font-size: 1.2rem;
+  color: $charcoal;
+  font-size: 1.3rem;
     &:hover{
       text-decoration: underline;
-      color: white;
+      // color: white;
     }
   }
 }

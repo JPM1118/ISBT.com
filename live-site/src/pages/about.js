@@ -7,12 +7,12 @@ export default () => (
   <Layout>
     <div className={aboutStyles.container}>
       <div className={aboutStyles.hero}>
-        <h1>Barb is the best in the business.</h1>
+        <h1>“Customer centric, relationship driven, and trusted partner to all our clients”</h1>
       </div>
       <div className={aboutStyles.aboutBody}>
-        <h2>I’m good enough, I’m smart enough, and gosh darn it, people like me!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tempora inventore mollitia quibusdam dolorem nesciunt beatae officiis quod molestias provident odit distinctio at, quis commodi quia. Sed impedit deserunt fuga.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero quidem, consequuntur debitis dolorem, saepe minima odit neque hic veritatis officia voluptatum, soluta error! Earum hic laboriosam nihil ut beatae blanditiis.</p>
+        <h2>About Us</h2>
+        <p><span style={{ fontStyle: 'italic' }}>Interior Sources, LLC</span> is a multiline sales organization, serving the interior design community. We represent the world’s finest luxury products for the residential, hospitality, and commercial markets in Illinois and Wisconsin. Interior Sources thoughtfully curates each client’s presentation to their design aesthetic. We are customer centric, relationship driven, and trusted a partner to all our clients.</p>
+        <p>Barbara Todd established Interior Sources after years of experience in the interior design industry, both in design and sales. Her passion, knowledge, and experience with textiles, leather, wallcovering, lighting, and furniture make her an invaluable partner and educator in navigating the scope of each design project.</p>
       </div>
     </div>
   </Layout>
