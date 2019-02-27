@@ -19,7 +19,7 @@ class Contact extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-    setTimeout(() => {}, 3000);
+    setTimeout(() => { }, 3000);
   };
 
   handleSubmit = e => {
@@ -27,7 +27,10 @@ class Contact extends Component {
     e.preventDefault();
 
     axios
-      .post('https://large-quetzal.dev.with-datafire.io/contact', this.state, {
+      .post('https://large-quetzal.prod.with-datafire.io/contact', this.state, {
+        headers: {
+          "X-DataFire-Auth": "8c2e15549940c0ec3324c43a"
+        },
         cancelToken: this.signal.token
       })
       .then(res => {
@@ -73,42 +76,42 @@ class Contact extends Component {
                 </p>
               </div>
             ) : (
-              <form onSubmit={this.handleSubmit}>
-                <h1>Contact Me</h1>
-                <div className={contactStyles.name}>
-                  <label>Your Name</label>
-                  <input
-                    type='text'
-                    name='name'
-                    value={this.state.name}
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className={contactStyles.message}>
-                  <label>Message</label>
-                  <textarea
-                    name='message'
-                    value={this.state.message}
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className={contactStyles.email}>
-                  <label>Your Email Address</label>
-                  <input
-                    type='email'
-                    name='emailAddress'
-                    value={this.state.emailAddress}
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <button
-                  className={contactStyles.btn}
-                  disabled={this.enableButton()}
-                >
-                  Submit
+                <form onSubmit={this.handleSubmit}>
+                  <h1>Contact Me</h1>
+                  <div className={contactStyles.name}>
+                    <label>Your Name</label>
+                    <input
+                      type='text'
+                      name='name'
+                      value={this.state.name}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className={contactStyles.message}>
+                    <label>Message</label>
+                    <textarea
+                      name='message'
+                      value={this.state.message}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className={contactStyles.email}>
+                    <label>Your Email Address</label>
+                    <input
+                      type='email'
+                      name='emailAddress'
+                      value={this.state.emailAddress}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <button
+                    className={contactStyles.btn}
+                    disabled={this.enableButton()}
+                  >
+                    Submit
                 </button>
-              </form>
-            )}
+                </form>
+              )}
           </div>
         </div>
       </Layout>

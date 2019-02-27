@@ -5,12 +5,9 @@ import carouselStyles from './carousel.module.scss';
 import leftArrow from './arrowIcons/leftArrow.svg';
 import rightArrow from './arrowIcons/rightArrow.svg';
 
-
+const initialState = { currentIndex: 0 };
 export default class carousel extends Component {
-  state = {
-    currentIndex: 0
-  }
-
+  state = initialState
   previousSlide = () => {
     const lastIndex = this.props.image.length - 1;
     const { currentIndex } = this.state;
@@ -49,13 +46,23 @@ export default class carousel extends Component {
         return null;
     }
   }
-
+  currentImage = index => {
+    const { currentIndex } = this.state;
+    console.log(index === currentIndex)
+    return index === currentIndex;
+  }
+  componentDidUpdate(prevProps) {
+    console.log(this.props.image)
+    if (this.props !== prevProps) {
+      return this.setState(initialState);
+    }
+  }
   render() {
-    const { image } = this.props
+    const { image } = this.props;
     const renderArrows = () => {
-      console.log(image.length)
       return image.length > 1
     }
+
     return (
       <div className={carouselStyles.container}>
         {renderArrows()
@@ -79,8 +86,17 @@ export default class carousel extends Component {
           <Img fluid={this.props.image[this.state.currentIndex].node.childImageSharp.fluid} />
         </div>
         <div className={carouselStyles.link}>
-          <a href={this.designerLink()}>Link</a>
+          <a href={this.designerLink()} target="_blank" rel='noreferrer noopener'>{this.designerLink()}</a>
         </div>
+        <ul className={carouselStyles.imageList}>
+              {image.map((box, idx) => {
+                return (
+                  <li key={idx}>
+                    <div className={carouselStyles.imageBox} id={idx} style={this.currentImage(idx) ? { background: "white" } : null} />
+                  </li>
+                )
+              })}
+            </ul>
       </div>
     )
   }

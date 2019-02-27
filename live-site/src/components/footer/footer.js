@@ -7,7 +7,7 @@ const Footer = () => {
       {/* <hr /> */}
       <div className={footerStyles.wrapper}>
         <div className={footerStyles.icons}>
-          <a href="https://www.instagram.com/interiorsourcesbtodd/">
+          <a href="https://www.instagram.com/interiorsourcesbtodd/" target="_blank" rel='noreferrer noopener'>
             <svg className={footerStyles.igram} width="35px" height="35px" viewBox='0 0 65 70' >
               {/* <path fill="none" d="M-1-1h582v402H-1z" /> */}
               <g>
@@ -17,7 +17,7 @@ const Footer = () => {
               </g>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/barbara-todd-96471225/">
+          <a href="https://www.linkedin.com/in/barbara-todd-96471225/" target="_blank" rel='noreferrer noopener'>
             <svg className={footerStyles.linkedin} width="35" height="35" viewBox='0 0 65 70' xmlns="http://www.w3.org/2000/svg">
 
               {/* <g>

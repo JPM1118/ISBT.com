@@ -50,6 +50,9 @@ class Header extends Component {
             <ListLink to='/'>Home</ListLink>
             <ListLink to='/about/'>About</ListLink>
             <ListLink to='/represented-lines/'>Represented Lines</ListLink>
+            <li>
+              <a href="https://www.instagram.com/interiorsourcesbtodd/" target="_blank" rel='noreferrer noopener'>Instagram</a>
+            </li>
             <ListLink to='/contact/'>Contact</ListLink>
           </ul>
         </div>

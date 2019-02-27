@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
 import Carousel from '../components/carousel/carousel';
+import Modal from '../components/modal/modal';
 
 import repLineStyles from './styles/represented-lines.module.scss';
 
@@ -49,6 +50,7 @@ export default class extends Component {
       : this.state.focusedElement
     return (
       <Layout>
+        <Modal />
         <div className={repLineStyles.container}>
           <div className={repLineStyles.header}>
             <ul>
@@ -113,7 +115,7 @@ export const fluidImage = graphql`
     edges {
       node {
         childImageSharp {
-          fluid(maxWidth: 1200) {
+          fluid(maxWidth: 1200, maxHeight: 700) {
             ...GatsbyImageSharpFluid
           }
         }

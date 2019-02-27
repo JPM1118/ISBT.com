@@ -39,21 +39,37 @@
 }
 
 .link{
-  // position: absolute;
-  width: 50px;
-  // z-index: 1;
-  // bottom: 15px;
-  // left: 50%;
-  // transform: translateX(-50%);
-  margin: 10px auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 5px 0;
+  background: rgba(70,70,70, .7);
+  text-align: center;
   text-decoration: none;
 
   a{
-  color: $charcoal;
-  font-size: 1.3rem;
+  color: white;
+  font-weight: 100;
+  font-size: 1rem;
     &:hover{
       text-decoration: underline;
       // color: white;
     }
+  }
+}
+.imageList{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  li{
+    display: inline-block;
+    margin-right: 5px;
+  }
+  div{
+    padding: 5px;
+    border: 2px solid $charcoal;
   }
 }
