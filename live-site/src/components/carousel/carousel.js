@@ -48,11 +48,9 @@ export default class carousel extends Component {
   }
   currentImage = index => {
     const { currentIndex } = this.state;
-    console.log(index === currentIndex)
     return index === currentIndex;
   }
   componentDidUpdate(prevProps) {
-    console.log(this.props.image)
     if (this.props !== prevProps) {
       return this.setState(initialState);
     }
@@ -89,14 +87,14 @@ export default class carousel extends Component {
           <a href={this.designerLink()} target="_blank" rel='noreferrer noopener'>{this.designerLink()}</a>
         </div>
         <ul className={carouselStyles.imageList}>
-              {image.map((box, idx) => {
-                return (
-                  <li key={idx}>
-                    <div className={carouselStyles.imageBox} id={idx} style={this.currentImage(idx) ? { background: "white" } : null} />
-                  </li>
-                )
-              })}
-            </ul>
+          {image.map((box, idx) => {
+            return (
+              <li key={idx}>
+                <div className={carouselStyles.imageBox} id={idx} style={this.currentImage(idx) ? { background: "white" } : null} />
+              </li>
+            )
+          })}
+        </ul>
       </div>
     )
   }

@@ -27,13 +27,16 @@ class Header extends Component {
   }
   componentWillUnmount() {
     window.addEventListener('resize', this.resetState)
-
   }
 
   render() {
     const ListLink = this.props.ListLink;
     let arrow = this.state.arrowUp ? upArrow : downArrow
-    let display = window.innerWidth <= 700 && this.state.arrowUp ? { display: 'none' } : { display: 'inline-block' }
+    const display = () => {
+      if (typeof window !== `undefined`) {
+        return global.window.innerWidth <= 700 && this.state.arrowUp ? { display: 'none' } : { display: 'inline-block' }
+      }
+    }
     return (
       <header >
         <div className={headerStyles.header}>
@@ -46,7 +49,7 @@ class Header extends Component {
             </div>
           </div>
 
-          <ul className={headerStyles.linkGroup} style={display} >
+          <ul className={headerStyles.linkGroup} style={display()} >
             <ListLink to='/'>Home</ListLink>
             <ListLink to='/about/'>About</ListLink>
             <ListLink to='/represented-lines/'>Represented Lines</ListLink>

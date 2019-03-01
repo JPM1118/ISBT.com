@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'gatsby';
 import layoutStyles from './layout.module.scss';
 
+import SEO from '../SEO';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
@@ -12,12 +13,15 @@ const ListLink = props => (
 )
 
 export default ({ children }) => (
-  <div className={layoutStyles.container}>
-    <Header ListLink={ListLink} />
-    {
-      children
-    }
-      <Footer />    
+  <>
+    <SEO />
+    <div className={layoutStyles.container}>
+      <Header ListLink={ListLink} />
+      {
+        children
+      }
+      <Footer />
 
-  </div>
+    </div>
+  </>
 )
