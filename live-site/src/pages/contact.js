@@ -44,10 +44,8 @@ class Contact extends Component {
       })
       .catch(err => {
         if (axios.isCancel(err)) {
-          console.log('Request canceled', err.message);
         } else {
           this.setState({ isLoading: false });
-          console.log(err);
         }
       });
   };

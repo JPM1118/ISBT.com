@@ -60,7 +60,6 @@ export default class carousel extends Component {
     const renderArrows = () => {
       return image.length > 1
     }
-
     return (
       <div className={carouselStyles.container}>
         {renderArrows()
@@ -81,7 +80,7 @@ export default class carousel extends Component {
           : null
         }
         <div className={carouselStyles.imgSlide}>
-          <Img fluid={this.props.image[this.state.currentIndex].node.childImageSharp.fluid} />
+          <Img fluid={image[this.state.currentIndex].node.childImageSharp.fluid} />
         </div>
         <div className={carouselStyles.link}>
           <a href={this.designerLink()} target="_blank" rel='noreferrer noopener'>{this.designerLink()}</a>
