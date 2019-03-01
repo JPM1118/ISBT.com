@@ -137,7 +137,7 @@ export const carouselQuery = graphql`
     studio: allFile(filter: { name: { regex: "/^sa[1-3]/" } }) {
       ...fluidImage
     }
-    aesthetics: allFile(filter: { name: { regex: "/^aw/" } }) {
+    aesthetics: allFile(filter: { name: { regex: "/^aw[1-3]/" } }) {
       ...fluidImage
     }
   }
