@@ -11,7 +11,7 @@ export default () =>
       <Title />
       <div className={indexStyles.bentoForm}>
         <form name="subscribe" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="bot-field" value="subscribe" />
           <label htmlFor="subscribe">
             <h2>Singup for your complimentary Sample Bento Box.</h2>
             <img className src={bentoImg} alt="bento sample box" />
