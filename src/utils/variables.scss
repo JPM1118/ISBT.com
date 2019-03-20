@@ -4,5 +4,5 @@ $header-height: 75px;
 
 $footer-height: 50px;
 
-$home-body-height: unquote('calc(100vh - #{$footer-height} - #{$header-height})');
+$home-body-height: unquote('calc(100vh - #{$header-height})');
 $body-height: unquote('calc(100vh - #{$header-height})');

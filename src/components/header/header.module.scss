@@ -17,14 +17,14 @@
 .gridContainer {
   width: 250px;
   display: grid;
-  grid-template: 100% / 80% 20%;
+  grid-template: 100% / 20% 80%;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .header {
     background-color: $charcoal;
     height: $header-height;
     display: grid;
-    grid-template: 100% / 50% 50%;
+    grid-template: 100% / 25% 75%;
 
     img {
       // display: block;
@@ -42,7 +42,7 @@
   padding-left: 10px;
 }
 
-.navToggle {
+.burgerMenu {
   display: inline-block;
   width: 24px;
   justify-self: center;
@@ -52,8 +52,8 @@
     width: 24px;
   }
 }
-@media screen and (min-width: 700px) {
-  .navToggle {
+@media screen and (min-width: 1000px) {
+  .burgerMenu {
     display: none;
   }
 }
@@ -63,10 +63,10 @@
   list-style: none;
   display: none;
   width: 100%;
-  max-width: 700px;
+  // max-width: 700px;
   margin: 0 0;
   text-align: center;
-  background-color: $charcoal;
+  background-color: rgba(70, 70, 70, .6);
   li {
     color: white;
     display: block;
@@ -76,7 +76,6 @@
       color: white;
       cursor: pointer;
       padding-bottom: 5px;
-      border-bottom: 2px $charcoal solid;
 
       &:hover {
         border-bottom: 2px white solid;
@@ -85,14 +84,15 @@
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .linkGroup {
     align-self: center;
+    justify-self: right;
     list-style: none;
     display: inline-block;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    // width: 1000px;
+    // max-width: 500px;
+    margin: 0 0;
     text-align: center;
     li {
       color: white;

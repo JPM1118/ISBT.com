@@ -1,27 +1,22 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
+
 import headerStyles from './header.module.scss'
 import logo from './logo.svg';
-import downArrow from './downArrow.png';
-import upArrow from './upArrow.png';
+import hamburger from './hamburger.svg';
 
-const initialState = { arrowUp: true }
+const initialState = { showNav: false }
 
 class Header extends Component {
 
-  state = initialState
+  state = initialState;
 
-
-  handleClick = () => {
-    this.setState({
-      arrowUp: !this.state.arrowUp,
-    })
+  handleBurgerClick = () => {
+    this.setState({ showNav: !this.state.showNav })
   }
-
-  resetState = (e) => {
+  resetState = () => {
     this.setState(initialState)
   }
-
   componentDidMount() {
     window.addEventListener('resize', this.resetState)
   }
@@ -31,32 +26,28 @@ class Header extends Component {
 
   render() {
     const ListLink = this.props.ListLink;
-    let arrow = this.state.arrowUp ? upArrow : downArrow
     const display = () => {
       if (typeof window !== `undefined`) {
-        return global.window.innerWidth <= 700 && this.state.arrowUp ? { display: 'none' } : { display: 'inline-block' }
+        return global.window.innerWidth <= 1000 && !this.state.showNav ? { display: 'none' } : { display: 'inline-block' }
       }
     }
     return (
       <header >
         <div className={headerStyles.header}>
           <div className={headerStyles.gridContainer}>
+            <div className={headerStyles.burgerMenu} onClick={this.handleBurgerClick}><img src={hamburger} alt="nav menu" /></div>
             <Link to='/' className={headerStyles.imgContainer}>
               <img src={logo} alt="logo" />
             </Link>
-            <div className={headerStyles.navToggle} onClick={this.handleClick} >
-              <img src={arrow} alt="navigation toggle" />
-            </div>
           </div>
-
-          <ul className={headerStyles.linkGroup} style={display()} >
+          <ul className={headerStyles.linkGroup} style={display()}>
             <ListLink to='/'>Home</ListLink>
             <ListLink to='/about/'>About</ListLink>
-            <ListLink to='/represented-lines/'>Represented Lines</ListLink>
-            <li>
-              <a href="https://www.instagram.com/interiorsourcesbtodd/" target="_blank" rel='noreferrer noopener'>Instagram</a>
-            </li>
-            <ListLink to='/contact/'>Contact</ListLink>
+            <ListLink to='/CastelMaison/'>Castel Maison</ListLink>
+            <ListLink to='/GuellLamadrid/'>Guell Lamadrid</ListLink>
+            <ListLink to='/LesCreations/'>Les Cr&eacute;ations de la Maison</ListLink>
+            <ListLink to='/Studioart/'>Studioart</ListLink>
+            <ListLink to='/Aesthetics/'>Aesthetics Wallcoverings</ListLink>
           </ul>
         </div>
       </header>

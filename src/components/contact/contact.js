@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Layout from '../components/layout/layout';
 import axios from 'axios';
 
-import contactStyles from './styles/contact.module.scss';
+import contactStyles from './contact.module.scss';
 
 const initialState = {
   name: '',
@@ -62,20 +61,20 @@ class Contact extends Component {
 
   render() {
     return (
-      <Layout>
-        <div className={contactStyles.container}>
-          <div className={contactStyles.main}>
-            {this.state.successSubmit ? (
-              <div className={contactStyles.success}>
-                <h2>Thank You!</h2>
-                <p>
-                  Your message has been sent and I will respond as soon as
-                  possible.
+      <div className={contactStyles.container}>
+        {this.state.successSubmit ? (
+          <div className={contactStyles.success}>
+            <h2>Thank You!</h2>
+            <p>
+              Your message has been sent and I will respond as soon as
+              possible.
                 </p>
-              </div>
-            ) : (
+          </div>
+        ) : (
+            <>
+              <h2>Contact Us</h2>
+              <div className={contactStyles.main}>
                 <form onSubmit={this.handleSubmit}>
-                  <h1>Contact Me</h1>
                   <div className={contactStyles.name}>
                     <label>Your Name</label>
                     <input
@@ -109,10 +108,10 @@ class Contact extends Component {
                     Submit
                 </button>
                 </form>
-              )}
-          </div>
-        </div>
-      </Layout>
+              </div>
+            </>
+          )}
+      </div>
     );
   }
 }

@@ -60,6 +60,7 @@ export default class carousel extends Component {
     const renderArrows = () => {
       return image.length > 1
     }
+    console.log(image);
     return (
       <div className={carouselStyles.container}>
         {renderArrows()

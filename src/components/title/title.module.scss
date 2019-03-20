@@ -1,0 +1,64 @@
+@import './../../utils/variables.scss';
+
+
+.container{
+  background: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3)), url('./../../img/index_img/43_edited.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  height: 100vh;  
+}
+
+.title{
+  background: rgba(70,70,70,.5);
+    border-radius: 5px;
+    position: relative; 
+    transform: translateY(-50%);
+    top: 50%;
+  
+  h1{
+    font-size: 2rem;
+    font-weight: 300;
+    padding-left: 10px;
+    margin: 0 auto;
+    color: white;
+    max-width: 600px;
+    text-align: center;
+    animation: slideIn 1s 1 normal ease-out;
+    width: 100%;
+  }
+
+  @keyframes slideIn {
+    0% {font-size: 1.9rem;}
+    100% {font-size: 2rem;}
+  }
+  }
+
+  @media screen and (min-width: 700px){
+    .title { 
+    position: relative;
+    top: 40%;
+    padding: 25px;
+    h1{
+      font-size: 3.5rem;
+
+    }
+   }
+
+   @keyframes slideIn {
+    0% {font-size: 3.3rem;}
+    100% {font-size: 3.5rem;}
+   }
+  }
+  
+  .bentoForm{
+    width: 95%;
+    max-width: 600px;
+    margin: 60px auto;
+    text-align: center;
+  }
+  
+
+  
+

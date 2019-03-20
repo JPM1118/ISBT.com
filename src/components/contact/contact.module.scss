@@ -1,17 +1,20 @@
 @import './../../utils/variables.scss';
 
 .container {
-  min-height: $body-height;
   color: $charcoal;
   position: relative;
+  margin-top: 200px;
+  padding: 80px 0;
+  background: #EBEBEB;
 
-  h1 {
+  h2 {
     padding-top: 10px;
     margin: 10px auto;
-    text-align: center;
-    
-      border-bottom: 2px solid $charcoal;
-      padding-bottom: 10px;
+    // text-align: center;
+    border-bottom: 2px solid $charcoal;
+    padding-bottom: 10px;
+    max-width: 800px;
+    width: 95%;
       
   }
   label,
@@ -60,7 +63,7 @@
 
 .main {
   overflow: auto;
-  width: 100%;
+  width: 95%;
   max-width: 600px;
   margin: 10px auto;
 }
@@ -71,6 +74,6 @@
     position: relative;
     width: 100%;
     max-width: 600px;
-    margin: 10px auto;
+    margin: 30px auto;
   }
 }
