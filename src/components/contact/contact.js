@@ -37,7 +37,7 @@ class Contact extends Component {
               <h2>Contact Us</h2>
               <div className={contactStyles.main}>
                 <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-                  <input type="hidden" name="bot-field" value="contact" />
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className={contactStyles.name}>
                     <label htmlFor="name">
                       Your Name
