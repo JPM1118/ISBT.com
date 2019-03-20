@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 import contactStyles from './contact.module.scss';
 
@@ -7,53 +6,16 @@ const initialState = {
   name: '',
   message: '',
   emailAddress: '',
-  successSubmit: false,
-  isLoading: false
 };
 
 class Contact extends Component {
   state = initialState;
-  signal = axios.CancelToken.source();
+
   handleChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
-    setTimeout(() => { }, 3000);
   };
-
-  handleSubmit = e => {
-    this.setState(initialState);
-    e.preventDefault();
-
-    axios
-      .post('https://large-quetzal.prod.with-datafire.io/contact', this.state, {
-        headers: {
-          "X-DataFire-Auth": "8c2e15549940c0ec3324c43a"
-        },
-        cancelToken: this.signal.token
-      })
-      .then(res => {
-        this.setState({ isLoading: true });
-        return res;
-      })
-      .then(res => {
-        if (res.status === 200) {
-          this.setState({ successSubmit: true });
-        }
-      })
-      .catch(err => {
-        if (axios.isCancel(err)) {
-        } else {
-          this.setState({ isLoading: false });
-        }
-      });
-  };
-
-  componentWillUnmount() {
-    if (this.state.isLoading) {
-      this.signal.cancel('Component is unmounting.');
-    }
-  }
 
   enableButton = () => {
     return !(this.state.name && this.state.message && this.state.emailAddress);
@@ -74,39 +36,47 @@ class Contact extends Component {
             <>
               <h2>Contact Us</h2>
               <div className={contactStyles.main}>
-                <form onSubmit={this.handleSubmit}>
+                <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                  <input type="hidden" name="bot-field" />
                   <div className={contactStyles.name}>
-                    <label>Your Name</label>
-                    <input
-                      type='text'
-                      name='name'
-                      value={this.state.name}
-                      onChange={this.handleChange}
-                    />
+                    <label htmlFor="name">
+                      Your Name
+                      <input
+                        type='text'
+                        name='name'
+                        value={this.state.name}
+                        onChange={this.handleChange}
+                      />
+                    </label>
                   </div>
                   <div className={contactStyles.message}>
-                    <label>Message</label>
-                    <textarea
-                      name='message'
-                      value={this.state.message}
-                      onChange={this.handleChange}
-                    />
+                    <label htmlFor="message">
+                      Message
+                      <textarea
+                        name='message'
+                        value={this.state.message}
+                        onChange={this.handleChange}
+                      />
+                    </label>
                   </div>
                   <div className={contactStyles.email}>
-                    <label>Your Email Address</label>
-                    <input
-                      type='email'
-                      name='emailAddress'
-                      value={this.state.emailAddress}
-                      onChange={this.handleChange}
-                    />
+                    <label htmlFor="email">
+                      Your Email Address
+                      <input
+                        type='email'
+                        name='emailAddress'
+                        value={this.state.emailAddress}
+                        onChange={this.handleChange}
+                      />
+                    </label>
                   </div>
                   <button
                     className={contactStyles.btn}
                     disabled={this.enableButton()}
+                    type="submit"
                   >
                     Submit
-                </button>
+                  </button>
                 </form>
               </div>
             </>
