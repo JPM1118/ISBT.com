@@ -10,31 +10,18 @@ import repLineStyles from './styles/represented-lines.module.scss';
 export default class extends Component {
   render() {
     const designer = 'castel';
-    console.log(this.props.data)
+    const designerName = 'Castel Maison';
     return (
       <Layout>
         <Modal />
         <div className={repLineStyles.container}>
-          <h1>Castel Maison</h1>
-          <Carousel designer={designer} image={this.props.data[designer].edges} />
+          <h1>{designerName}</h1>
+          <Carousel designer={designer} designerName={designerName} image={this.props.data[designer].edges} />
         </div>
       </Layout>
     );
   }
 }
-// export const fluidImage = graphql`
-//   fragment fluidImage on FileConnection {
-//     edges {
-//       node {
-//         childImageSharp {
-//           fluid(maxWidth: 1200, maxHeight: 700, quality: 100) {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
 export const castelQuery = graphql`
   query {
     castel: allFile(filter: { name: { regex: "/^c[1-3]/" } }) {

@@ -9,31 +9,20 @@ import repLineStyles from './styles/represented-lines.module.scss';
 
 export default class extends Component {
   render() {
-    const designer = "guellLamadrid";
+    const designer = 'guellLamadrid';
+    const designerName = 'Guell Lamadrid'
     return (
       <Layout>
         <Modal />
         <div className={repLineStyles.container}>
-          <h1>Guell LaMadrid</h1>
-          <Carousel designer={designer} image={this.props.data[designer].edges} />
+          <h1>{designerName}</h1>
+          <Carousel designer={designer} designerName={designerName} image={this.props.data[designer].edges} />
         </div>
       </Layout>
     );
   }
 }
-// export const fluidImage = graphql`
-//   fragment fluidImage on FileConnection {
-//     edges {
-//       node {
-//         childImageSharp {
-//           fluid(maxWidth: 1200, maxHeight: 700, quality: 100) {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+
 export const carouselQuery = graphql`
   query {
     guellLamadrid: allFile(filter: { name: { regex: "/gl[1-3]/" } }) {

@@ -9,31 +9,19 @@ import repLineStyles from './styles/represented-lines.module.scss';
 
 export default class extends Component {
   render() {
-    const designer = "studio";
+    const designer = 'studio';
+    const designerName = 'Studioart';
     return (
       <Layout>
         <Modal />
         <div className={repLineStyles.container}>
-          <h1>Studioart</h1>
-          <Carousel designer={designer} image={this.props.data[designer].edges} />
+          <h1>{designerName}</h1>
+          <Carousel designer={designer} designerName={designerName} image={this.props.data[designer].edges} />
         </div>
       </Layout>
     );
   }
 }
-// export const fluidImage = graphql`
-//   fragment fluidImage on FileConnection {
-//     edges {
-//       node {
-//         childImageSharp {
-//           fluid(maxWidth: 1200, maxHeight: 700, quality: 100) {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
 export const carouselQuery = graphql`
   query {
     studio: allFile(filter: { name: { regex: "/^sa[1-3]/" } }) {

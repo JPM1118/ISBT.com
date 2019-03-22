@@ -9,31 +9,19 @@ import repLineStyles from './styles/represented-lines.module.scss';
 
 export default class extends Component {
   render() {
-    const designer = "lcdlm";
+    const designer = 'lcdlm';
+    const designerName = `Les Cr\u00E9ations de la Maison`
     return (
       <Layout>
         <Modal />
         <div className={repLineStyles.container}>
-          <h1>Les Cr&eacute;ations de la Maison</h1>
-          <Carousel designer={designer} image={this.props.data[designer].edges} />
+          <h1>{designerName}</h1>
+          <Carousel designer={designer} designerName={designerName} image={this.props.data[designer].edges} />
         </div>
       </Layout>
     );
   }
 }
-// export const fluidImage = graphql`
-//   fragment fluidImage on FileConnection {
-//     edges {
-//       node {
-//         childImageSharp {
-//           fluid(maxWidth: 1200, maxHeight: 700, quality: 100) {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
 export const carouselQuery = graphql`
   query {
     lcdlm: allFile(filter: { name: { regex: "/lc[1-3]/" } }) {

@@ -6,6 +6,12 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `interiorsourcesbtodd`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: "Interior Sources by Barbara Todd",

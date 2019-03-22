@@ -52,10 +52,24 @@
    }
   }
   
-  .bentoForm{
-    width: 95%;
-    max-width: 600px;
-    margin: 60px auto;
+  .repLinesLogos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
+    position: relative; 
+    transform: translateY(-55%);
+    top: 55%;
+    margin: 0 auto;
+  }
+  .logo{
+    margin: 10px;
+    width: 150px;
+    height: 45px;
+    align-self: center;
+    justify-self: center;
     text-align: center;
   }
   

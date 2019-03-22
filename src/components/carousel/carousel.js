@@ -56,15 +56,14 @@ export default class carousel extends Component {
     }
   }
   render() {
-    const { image } = this.props;
+    const { image, designerName } = this.props;
     const renderArrows = () => {
       return image.length > 1
     }
-    console.log(image);
     return (
       <div className={carouselStyles.container}>
         {renderArrows()
-          ? <React.Fragment>
+          ? <>
             <div
               className={carouselStyles.arrowLeft}
               onClick={this.previousSlide}
@@ -77,11 +76,11 @@ export default class carousel extends Component {
             >
               <img src={rightArrow} alt="next slide" />
             </div>
-          </React.Fragment>
+          </>
           : null
         }
         <div className={carouselStyles.imgSlide}>
-          <Img fluid={image[this.state.currentIndex].node.childImageSharp.fluid} />
+          <Img fluid={image[this.state.currentIndex].node.childImageSharp.fluid} alt={designerName} />
         </div>
         <div className={carouselStyles.link}>
           <a href={this.designerLink()} target="_blank" rel='noreferrer noopener'>{this.designerLink()}</a>
