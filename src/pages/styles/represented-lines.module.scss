@@ -3,130 +3,38 @@
 .container {
   min-height: $body-height;
   padding-bottom: 30px;
+  color: $charcoal;
 
   h1{
     border-bottom: 2px black solid;
     width: 100%;
     max-width: 800px;
     text-align: center;
-    margin: 60px auto 60px auto;
+    margin: 60px auto 30px auto;
     font-size: 3rem;
   }
 }
-
-.header {
-  align-self: center;
-  justify-self: start;
-  list-style: none;
-  width: 100%;
-  margin: 0 0;
-  text-align: center;
-  background-color: white;
-  padding: 40px 0;
-  li {
-    color: $charcoal;
-    font-size: 1rem;
-    display: block;
-    margin-right: 1.2rem;
-    padding: 5px 0;
-  }
-}
-.focused {
-  border-bottom: 2px $charcoal solid;
-}
-.display {
+.sampleRequest{
   display: block;
-}
-.noDisplay {
-  display: none;
-}
-.subFocused {
-  border-bottom: 2px $charcoal solid;
-}
-.subNotFocused {
-  border-bottom: 2px white solid;
-}
-.castelSubs {
-  width: 100%;
+  width: 90%;
+  max-width:600px;
   text-align: center;
-  padding-top: 20px;
-  ul {
-    align-self: center;
-    list-style: none;
-    display: inline-block;
-    li {
-      position: relative;
-      font-size: 0.9rem;
-      color: $charcoal;
-      display: inline-block;
-      margin-right: 1.2rem;
-      cursor: pointer;
-      text-decoration: none;
+  margin: 0 auto 30px auto;
+}
+@media screen and(min-width: 1025px) {
+  .container{
+    h1{
+      margin: 60px auto 60px auto;
     }
+  }
+  .sampleRequest{
+    display: none;
   }
 }
-
-@media screen and (min-width: 600px) {
-  .header {
-    align-self: center;
-    list-style: none;
-    display: inline-block;
-    width: 100%;
-    padding: 70px 0 20px 0;
-    margin: 0 auto;
-    text-align: center;
-    li {
-      position: relative;
-      font-size: 1.1rem;
-      color: $charcoal;
-      display: inline-block;
-      margin-right: 1.2rem;
-      cursor: pointer;
-      border-bottom: 2px white solid;
-      text-decoration: none;
-    }
-  }
-
-  .focused {
-    &:after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid $charcoal;
-      content: ' ';
-      position: absolute;
-      bottom: -15px;
-      left: calc(50% - 10px);
-    }
-  }
-  .castelSubs {
-    width: 100%;
-    text-align: center;
-    padding-top: 20px;
-    ul {
-      align-self: center;
-      list-style: none;
-      display: inline-block;
-      li {
-        position: relative;
-        font-size: 1.1rem;
-        color: $charcoal;
-        display: inline-block;
-        margin-right: 1.2rem;
-        cursor: pointer;
-        text-decoration: none;
-      }
-    }
-  }
+.aboutLink{
+  text-decoration: underline;
+  color: $charcoal;
 }
-
-@media screen and (min-width: 700px) {
-  .header {
-    li {
-      font-size: 1.3rem;
-      margin-right: 1.5rem;
-    }
-  }
+.email{
+  font-style: italic;
 }

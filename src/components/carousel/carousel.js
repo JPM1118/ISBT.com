@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby';
 import Img from 'gatsby-image'
 
 import carouselStyles from './carousel.module.scss';
@@ -79,6 +80,15 @@ export default class carousel extends Component {
           </>
           : null
         }
+        <div className={carouselStyles.overlay}>
+          <div className={carouselStyles.textWrapper}>
+            For memo requests and quotes, please use the contact form in the{' '}
+            <Link className={carouselStyles.aboutLink} to='/about/'>About Page</Link> or email:{' '}
+            <span className={carouselStyles.email} >
+              Barbara@interiorsourcesbtodd.com
+            </span>
+          </div>
+        </div>
         <div className={carouselStyles.imgSlide}>
           <Img fluid={image[this.state.currentIndex].node.childImageSharp.fluid} alt={designerName} />
         </div>

@@ -36,6 +36,7 @@ query ScrapingQuery {
         likes
         caption
         comments
+        timestamp
         localFile {
           childImageSharp {
             fluid(quality: 90, maxWidth: 300, maxHeight: 300) {

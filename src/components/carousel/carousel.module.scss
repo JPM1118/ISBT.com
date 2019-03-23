@@ -37,7 +37,49 @@
     right: 3px;
   }
 }
-
+.overlay{
+  display: none;
+}
+@media screen and (min-width: 1025px){
+.overlay{
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50px;
+  right: 50px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  &:hover{
+    opacity: 1;
+  }
+  &:active{
+    // display: none;
+  }
+}
+.textWrapper{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
+.aboutLink{
+  color: white;
+  text-decoration: underline;
+  &:hover{
+    color: $charcoal;
+  }
+}
+.email{
+  font-style: italic;
+}
+}
 .link{
   position: absolute;
   left: 0;
