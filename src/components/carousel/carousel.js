@@ -43,6 +43,12 @@ export default class carousel extends Component {
         return 'http://www.studioart.it/en';
       case 'aesthetics':
         return 'https://www.aestheticswall.com/'
+      case 'spaces':
+        return 'https://www.4spaces.ch/'
+      case 'lithos':
+        return 'https://www.lithosdesign.com/'
+      case 'charles':
+        return 'https://www.charles.fr/'
       default:
         return null;
     }
@@ -61,6 +67,10 @@ export default class carousel extends Component {
     const renderArrows = () => {
       return image.length > 1
     }
+    const orderedNodes = (array) => {
+      return array.sort((a, b) => (a.node.name > b.node.name) ? 1 : -1)
+    }
+    const orderImages = orderedNodes(image)
     return (
       <div className={carouselStyles.container}>
         {renderArrows()
@@ -90,7 +100,7 @@ export default class carousel extends Component {
           </div>
         </div>
         <div className={carouselStyles.imgSlide}>
-          <Img fluid={image[this.state.currentIndex].node.childImageSharp.fluid} alt={designerName} />
+          <Img fluid={orderImages[this.state.currentIndex].node.childImageSharp.fluid} alt={designerName} />
         </div>
         <div className={carouselStyles.link}>
           <a href={this.designerLink()} target="_blank" rel='noreferrer noopener'>{this.designerLink()}</a>

@@ -8,7 +8,8 @@ export const fluidImage = graphql`
           fluid(maxWidth: 1200, maxHeight: 700, quality: 100) {
             ...GatsbyImageSharpFluid
           }
-        }
+        },
+        name
       }
     }
   }
