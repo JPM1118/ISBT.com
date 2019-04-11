@@ -15,11 +15,11 @@ export default () =>
       <h1>Thoughtfully curated resourcing for all your interior design projects.</h1>
     </div>
     <div className={titleStyle.repLinesLogos}>
-      <div className={titleStyle.logo}><img src={castelIcon} alt="Castel Maison Logo" /></div>
-      <div className={titleStyle.logo}><img src={studioartIcon} alt="Studioart Logo" /></div>
-      <div className={titleStyle.logo}><img src={aestheticsIcon} alt="Aesthetics Wallcoverings Logo" /></div>
-      <div className={titleStyle.logo}><img src={charlesIcon} alt="Charles Paris Logo" /></div>
-      <div className={titleStyle.logo}><img src={spacesIcon} alt="4Spaces Logo" /></div>
-      <div className={titleStyle.logo}><img src={lithosIcon} alt="Lithos Logo" /></div>
+      <div className={titleStyle.logo}><a href="https://www.castelmaison.com/" target="_blank" rel='noreferrer noopener'><img src={castelIcon} alt="Castel Maison Logo" /></a></div>
+      <div className={titleStyle.logo}><a href="http://www.studioart.it/en" target="_blank" rel='noreferrer noopener'><img src={studioartIcon} alt="Studioart Logo" /></a></div>
+      <div className={titleStyle.logo}><a href="https://www.aestheticswall.com/" target="_blank" rel='noreferrer noopener'><img src={aestheticsIcon} alt="Aesthetics Wallcoverings Logo" /></a></div>
+      <div className={titleStyle.logo}><a href="https://www.charles.fr/" target="_blank" rel='noreferrer noopener'><img src={charlesIcon} alt="Charles Paris Logo" /></a></div>
+      <div className={titleStyle.logo}><a href="https://www.4spaces.ch/" target="_blank" rel='noreferrer noopener'><img src={spacesIcon} alt="4Spaces Logo" /></a></div>
+      <div className={titleStyle.logo}><a href="https://www.lithosdesign.com/" target="_blank" rel='noreferrer noopener'><img src={lithosIcon} alt="Lithos Logo" /></a></div>
     </div>
   </div>
