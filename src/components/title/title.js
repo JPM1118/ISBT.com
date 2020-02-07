@@ -1,25 +1,65 @@
-import React from "react"
-import titleStyle from './title.module.scss'
+import React from "react";
+import titleStyle from "./title.module.scss";
 
-import castelIcon from './castelIcon.svg';
-import studioartIcon from './studioart.svg';
-import aestheticsIcon from './aesthetics.svg';
-import charlesIcon from './charlesIcon.svg';
-import spacesIcon from './4spacesIcon.png';
-import lithosIcon from './lithosIcon.png';
+import castelIcon from "./castelIcon.svg";
+import studioartIcon from "./studioart.svg";
+import aestheticsIcon from "./aesthetics.svg";
+import spacesIcon from "./4spacesIcon.png";
+import lithosIcon from "./lithosIcon.png";
 
-
-export default () =>
+export default () => (
   <div className={titleStyle.container}>
     <div className={titleStyle.title}>
-      <h1>Thoughtfully curated resourcing for all your interior design projects.</h1>
+      <h1>
+        Thoughtfully curated resourcing for all your interior design projects.
+      </h1>
     </div>
     <div className={titleStyle.repLinesLogos}>
-      <div className={titleStyle.logo}><a href="https://www.castelmaison.com/" target="_blank" rel='noreferrer noopener'><img src={castelIcon} alt="Castel Maison Logo" /></a></div>
-      <div className={titleStyle.logo}><a href="http://www.studioart.it/en" target="_blank" rel='noreferrer noopener'><img src={studioartIcon} alt="Studioart Logo" /></a></div>
-      <div className={titleStyle.logo}><a href="https://www.aestheticswall.com/" target="_blank" rel='noreferrer noopener'><img src={aestheticsIcon} alt="Aesthetics Wallcoverings Logo" /></a></div>
-      <div className={titleStyle.logo}><a href="https://www.charles.fr/" target="_blank" rel='noreferrer noopener'><img src={charlesIcon} alt="Charles Paris Logo" /></a></div>
-      <div className={titleStyle.logo}><a href="https://www.4spaces.ch/" target="_blank" rel='noreferrer noopener'><img src={spacesIcon} alt="4Spaces Logo" /></a></div>
-      <div className={titleStyle.logo}><a href="https://www.lithosdesign.com/" target="_blank" rel='noreferrer noopener'><img src={lithosIcon} alt="Lithos Logo" /></a></div>
+      <div className={titleStyle.logo}>
+        <a
+          href="https://www.castelmaison.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={castelIcon} alt="Castel Maison Logo" />
+        </a>
+      </div>
+      <div className={titleStyle.logo}>
+        <a
+          href="http://www.studioart.it/en"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={studioartIcon} alt="Studioart Logo" />
+        </a>
+      </div>
+      <div className={titleStyle.logo}>
+        <a
+          href="https://www.aestheticswall.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={aestheticsIcon} alt="Aesthetics Wallcoverings Logo" />
+        </a>
+      </div>
+      <div className={titleStyle.logo}>
+        <a
+          href="https://www.4spaces.ch/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={spacesIcon} alt="4Spaces Logo" />
+        </a>
+      </div>
+      <div className={titleStyle.logo}>
+        <a
+          href="https://www.lithosdesign.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={lithosIcon} alt="Lithos Logo" />
+        </a>
+      </div>
     </div>
   </div>
+);
