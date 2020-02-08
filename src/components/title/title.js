@@ -6,6 +6,8 @@ import studioartIcon from "./studioart.svg";
 import aestheticsIcon from "./aesthetics.svg";
 import spacesIcon from "./4spacesIcon.png";
 import lithosIcon from "./lithosIcon.png";
+import ionaIcon from "./ionaIcon.png";
+import sandersonIcon from "./sandersonIcon.png";
 
 export default () => (
   <div className={titleStyle.container}>
@@ -58,6 +60,24 @@ export default () => (
           rel="noreferrer noopener"
         >
           <img src={lithosIcon} alt="Lithos Logo" />
+        </a>
+      </div>
+      <div className={titleStyle.logo}>
+        <a
+          href="https://www.ionacrawford.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={ionaIcon} alt="Iona Crawford Logo" />
+        </a>
+      </div>
+      <div className={titleStyle.logo}>
+        <a
+          href="https://www.iansanderson.co.uk/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={sandersonIcon} alt="Ian Sanderson Logo" />
         </a>
       </div>
     </div>

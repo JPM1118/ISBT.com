@@ -1,0 +1,40 @@
+@import "./../../utils/variables.scss";
+
+.container {
+  min-height: $body-height;
+  padding-bottom: 30px;
+  color: $charcoal;
+
+  h1 {
+    border-bottom: 2px black solid;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: 60px auto 30px auto;
+    font-size: 3rem;
+  }
+}
+.sampleRequest {
+  display: block;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto 30px auto;
+}
+@media screen and(min-width: 1025px) {
+  .container {
+    h1 {
+      margin: 60px auto 30px auto;
+    }
+  }
+  .sampleRequest {
+    display: none;
+  }
+}
+.aboutLink {
+  text-decoration: underline;
+  color: $charcoal;
+}
+.email {
+  font-style: italic;
+}

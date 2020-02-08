@@ -1,23 +1,23 @@
-@import './../../utils/variables.scss';
+@import "./../../utils/variables.scss";
 
-
-.container{
-  background: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3)), url('./../../img/index_img/43_edited.jpg');
+.container {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./../../img/index_img/43_edited.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   // background-attachment: fixed;
-  height: 100vh;  
+  height: 100vh;
 }
 
-.title{
-  background: rgba(70,70,70,.5);
-    border-radius: 5px;
-    position: relative; 
-    // transform: translateY(-50%);
-    top: 20%;
-  
-  h1{
+.title {
+  background: rgba(70, 70, 70, 0.5);
+  border-radius: 5px;
+  position: relative;
+  // transform: translateY(-50%);
+  top: 20%;
+
+  h1 {
     font-size: 2rem;
     font-weight: 300;
     padding-left: 10px;
@@ -30,48 +30,71 @@
   }
 
   @keyframes slideIn {
-    0% {font-size: 1.9rem;}
-    100% {font-size: 2rem;}
-  }
-  }
-
-  @media screen and (min-width: 700px){
-    .title { 
-    position: relative;
-    top: 35%;
-    padding: 25px;
-    h1{
-      font-size: 3.5rem;
-
+    0% {
+      font-size: 1.9rem;
     }
-   }
+    100% {
+      font-size: 2rem;
+    }
+  }
+}
 
-   @keyframes slideIn {
-    0% {font-size: 3.3rem;}
-    100% {font-size: 3.5rem;}
-   }
+@media screen and (min-width: 700px) {
+  .title {
+    position: relative;
+    top: 25%;
+    padding: 25px;
+    h1 {
+      font-size: 3.5rem;
+    }
   }
-  
-  .repLinesLogos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 500px;
-    position: relative; 
-    transform: translateY(-55%);
+
+  @keyframes slideIn {
+    0% {
+      font-size: 3.3rem;
+    }
+    100% {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.repLinesLogos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  transform: translateY(-55%);
+  top: 50%;
+  margin: 10px auto 30px auto;
+}
+.logo {
+  margin: 10px;
+  width: 150px;
+  height: 75px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  img {
+    display: inline-block;
+    position: relative;
     top: 50%;
-    margin: 10px auto 30px auto;
+    transform: translateY(-50%);
+    margin-bottom: 0;
   }
-  .logo{
+}
+@media screen and (max-width: 350px) {
+  .logo {
     margin: 10px;
-    width: 150px;
-    height: 75px;
+    width: 75px;
+    // height: 75px;
     align-self: center;
     justify-self: center;
     text-align: center;
-    img{
+    img {
       display: inline-block;
       position: relative;
       top: 50%;
@@ -79,24 +102,4 @@
       margin-bottom: 0;
     }
   }
-  @media screen and (max-width: 350px){
-    .logo{
-      margin: 10px;
-      width: 75px;
-      // height: 75px;
-      align-self: center;
-      justify-self: center;
-      text-align: center;
-      img{
-        display: inline-block;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-bottom: 0;
-      }
-    }
-  }
-  
-
-  
-
+}
