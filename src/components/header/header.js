@@ -49,7 +49,7 @@ class Header extends Component {
           <ul className={headerStyles.linkGroup} style={display()}>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/about/">About</ListLink>
-            <ListLink to="/CastelMaison/">Castel Maison</ListLink>
+            <ListLink to="/CastelMaison/">Castel</ListLink>
             <ListLink to="/GuellLamadrid/">Guell Lamadrid</ListLink>
             <ListLink to="/LesCreations/">
               Les Cr&eacute;ations de la Maison

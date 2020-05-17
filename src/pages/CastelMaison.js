@@ -4,7 +4,7 @@ import DesignerPageLayout from "../components/designerPageLayout/DesignerPageLay
 
 export default () => {
   const designer = "castel";
-  const designerName = "Castel Maison";
+  const designerName = "Castel";
   const data = useStaticQuery(graphql`
     query {
       castel: allFile(filter: { name: { regex: "/^c[1-3]/" } }) {
