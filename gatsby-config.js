@@ -1,43 +1,43 @@
 module.exports = {
   plugins: [
-    'gatsby-plugin-typography',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-typography",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `interiorsourcesbtodd`,
+        username: `10029456595`,
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: "Interior Sources by Barbara Todd",
         short_name: "ISBT",
-        start_url: '/',
+        start_url: "/",
         background_color: "#464646",
-        theme_color: '#464646',
-        display: 'standalone',
-        icon: 'static/isbtFavicon.JPEG',
+        theme_color: "#464646",
+        display: "standalone",
+        icon: "static/isbtFavicon.JPEG",
         include_favicon: true,
       },
     },
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: 'src/utils/typography'
-      }
+        pathToConfigModule: "src/utils/typography",
+      },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'src',
+        name: "src",
         path: `${__dirname}/src/`,
       },
-    }
+    },
   ],
   siteMetadata: {
     title: "Interior Sources by Barbara Todd",
@@ -46,4 +46,4 @@ module.exports = {
     url: "https://www.interiorsourcesbtodd.com",
     image: "/isbtLogo.JPEG",
   },
-}
+};
