@@ -6,7 +6,7 @@ const DesignerLink = ({ designer }) => {
       width: "200px",
       textAlign: "center",
       margin: "20px auto",
-      fontSize: "18px"
+      fontSize: "18px",
     };
     return (
       <div style={style}>
@@ -37,8 +37,7 @@ const DesignerLink = ({ designer }) => {
       );
     case "studio":
       return <LinkWrapper link="http://www.studioart.it/en" />;
-    case "aesthetics":
-      return <LinkWrapper link="https://www.aestheticswall.com/" />;
+
     case "spaces":
       return <LinkWrapper link="https://www.4spaces.ch/" />;
     case "lithos":

@@ -55,7 +55,6 @@ class Header extends Component {
               Les Cr&eacute;ations de la Maison
             </ListLink>
             <ListLink to="/Studioart/">Studioart</ListLink>
-            <ListLink to="/Aesthetics/">Aesthetics Wallcoverings</ListLink>
             <ListLink to="/4Spaces/">4Spaces</ListLink>
             <ListLink to="/LithosDesign/">Lithos Design</ListLink>
           </ul>

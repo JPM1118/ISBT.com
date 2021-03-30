@@ -3,7 +3,6 @@ import titleStyle from "./title.module.scss";
 
 import castelIcon from "./castelIcon.svg";
 import studioartIcon from "./studioart.svg";
-import aestheticsIcon from "./aesthetics.svg";
 import spacesIcon from "./4spacesIcon.png";
 import lithosIcon from "./lithosIcon.png";
 import ionaIcon from "./ionaIcon.png";
@@ -35,15 +34,7 @@ export default () => (
           <img src={studioartIcon} alt="Studioart Logo" />
         </a>
       </div>
-      <div className={titleStyle.logo}>
-        <a
-          href="https://www.aestheticswall.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <img src={aestheticsIcon} alt="Aesthetics Wallcoverings Logo" />
-        </a>
-      </div>
+
       <div className={titleStyle.logo}>
         <a
           href="https://www.4spaces.ch/"
