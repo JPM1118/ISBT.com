@@ -6,38 +6,37 @@ import indexStyles from "./styles/index.module.scss";
 import Title from "../components/title/title";
 import Instagram from "../components/instagram/instagram";
 
-const Index = ({ data: { allInstaNode } }) => {
-  debugger;
+const Index = () => {
   return (
     <Layout>
       <div className={indexStyles.container}>
         <Title />
-        <Instagram nodes={allInstaNode} />
+        <Instagram />
       </div>
     </Layout>
   );
 };
 
-export const pageQuery = graphql`
-  query MyQuery {
-    allInstaNode {
-      edges {
-        node {
-          id
-          likes
-          caption
-          comments
-          timestamp
-          localFile {
-            childImageSharp {
-              fluid(quality: 90, maxWidth: 300, maxHeight: 300) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query MyQuery {
+//     allInstaNode {
+//       edges {
+//         node {
+//           id
+//           likes
+//           caption
+//           comments
+//           timestamp
+//           localFile {
+//             childImageSharp {
+//               fluid(quality: 90, maxWidth: 300, maxHeight: 300) {
+//                 ...GatsbyImageSharpFluid_withWebp
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 export default Index;

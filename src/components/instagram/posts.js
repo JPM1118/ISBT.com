@@ -6,7 +6,6 @@ import likeIcon from "./likeIcon.png";
 import commentsIcon from "./commentsIcon.png";
 
 const Post = ({ node }) => {
-  debugger;
   return (
     <a href={`https://www.instagram.com/p/${node.id}/`}>
       <div className={postStyles.postContainer}>

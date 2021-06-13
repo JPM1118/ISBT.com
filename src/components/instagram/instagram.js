@@ -3,7 +3,7 @@ import React from "react";
 import instagramStyles from "./instagram.module.scss";
 import Posts from "./posts";
 
-const Instagram = ({ nodes }) => {
+const Instagram = () => {
   return (
     <div className={instagramStyles.container}>
       <h1 className={instagramStyles.title}>Instagram</h1>
@@ -16,7 +16,7 @@ const Instagram = ({ nodes }) => {
           @interiorsourcesbtodd
         </a>
       </h2>
-      <Posts nodes={nodes} />
+      {/* <Posts /> */}
     </div>
   );
 };
