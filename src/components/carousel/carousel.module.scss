@@ -1,4 +1,4 @@
-@import '../../utils/variables.scss';
+@import "../../utils/variables.scss";
 
 .container {
   position: relative;
@@ -37,94 +37,98 @@
     right: 3px;
   }
 }
-.overlay{
+.overlay {
   display: none;
 }
-@media screen and (min-width: 1025px){
-.overlay{
-  display: block;
-  position: absolute;
-  z-index: 2;
-  top: 50px;
-  left: 50px;
-  right: 50px;
-  bottom: 50px;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  &:hover{
-    opacity: 1;
+@media screen and (min-width: 1025px) {
+  .overlay {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      // display: none;
+    }
   }
-  &:active{
-    // display: none;
+  .textWrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+  }
+  .aboutLink {
+    color: white;
+    text-decoration: underline;
+    &:hover {
+      color: $charcoal;
+    }
+  }
+  .email {
+    font-style: italic;
   }
 }
-.textWrapper{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 90%;
-  max-width: 350px;
-  margin: 0 auto;
-  text-align: center;
-  color: white;
-  font-size: 1.2rem;
-}
-.aboutLink{
-  color: white;
-  text-decoration: underline;
-  &:hover{
-    color: $charcoal;
-  }
-}
-.email{
-  font-style: italic;
-}
-}
-.link{
+.link {
   position: absolute;
   // z-index: 3;
   left: 0;
   top: 0;
   width: 100%;
   padding: 5px 0;
-  background: rgba(70,70,70, .7);
+  background: rgba(70, 70, 70, 0.7);
   text-align: center;
   text-decoration: none;
 
-  a{
-  color: white;
-  font-weight: 100;
-  font-size: .75rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-    &:hover{
+  a {
+    color: white;
+    font-weight: 100;
+    font-size: 0.75rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover {
       text-decoration: underline;
     }
   }
   @media screen and(min-width: 700px) {
-    a{
+    a {
       color: white;
       font-weight: 100;
       font-size: 1rem;
-        &:hover{
-          text-decoration: underline;
-        }
+      &:hover {
+        text-decoration: underline;
       }
+    }
   }
 }
-.imageList{
+.imageList {
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
-  li{
+  li {
     display: inline-block;
     margin-right: 5px;
   }
-  div{
+  div {
     padding: 5px;
     border: 2px solid $charcoal;
   }
+}
+button {
+  background-color: transparent;
+  border: none;
 }

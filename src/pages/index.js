@@ -6,22 +6,24 @@ import indexStyles from "./styles/index.module.scss";
 import Title from "../components/title/title";
 import Instagram from "../components/instagram/instagram";
 
-export default ({ data: { allInstaNode } }) => (
-  <Layout>
-    <div className={indexStyles.container}>
-      <Title />
-      <Instagram nodes={allInstaNode} />
-    </div>
-  </Layout>
-);
+const Index = ({ data: { allInstaNode } }) => {
+  debugger;
+  return (
+    <Layout>
+      <div className={indexStyles.container}>
+        <Title />
+        <Instagram nodes={allInstaNode} />
+      </div>
+    </Layout>
+  );
+};
 
 export const pageQuery = graphql`
-  query ScrapingQuery {
+  query MyQuery {
     allInstaNode {
       edges {
         node {
           id
-          username
           likes
           caption
           comments
@@ -38,3 +40,4 @@ export const pageQuery = graphql`
     }
   }
 `;
+export default Index;

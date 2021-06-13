@@ -1,27 +1,26 @@
 import React from "react";
-import { Link } from 'gatsby';
-import layoutStyles from './layout.module.scss';
+import { Link } from "gatsby";
+import layoutStyles from "./layout.module.scss";
 
-import SEO from '../SEO';
-import Header from '../header/header';
-import Footer from '../footer/footer';
+import Seo from "../SEO";
+import Header from "../header/header";
+import Footer from "../footer/footer";
 
-const ListLink = props => (
-  <li >
+const ListLink = (props) => (
+  <li>
     <Link to={props.to}> {props.children}</Link>
   </li>
-)
+);
 
-export default ({ children }) => (
+const Layout = ({ children }) => (
   <>
-    <SEO />
+    <Seo />
     <div className={layoutStyles.container}>
       <Header ListLink={ListLink} />
-      {
-        children
-      }
+      {children}
       <Footer />
-
     </div>
   </>
-)
+);
+
+export default Layout;

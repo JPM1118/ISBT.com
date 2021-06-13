@@ -6,6 +6,7 @@ import likeIcon from "./likeIcon.png";
 import commentsIcon from "./commentsIcon.png";
 
 const Post = ({ node }) => {
+  debugger;
   return (
     <a href={`https://www.instagram.com/p/${node.id}/`}>
       <div className={postStyles.postContainer}>
@@ -30,7 +31,7 @@ const orderedNodes = (array) => {
   return array.sort((a, b) => (a.node.timestamp < b.node.timestamp ? 1 : -1));
 };
 
-export default (props) => {
+const Posts = (props) => {
   return (
     <div className={postStyles.gridContainer}>
       {orderedNodes(props.nodes.edges).map((ig, index) => (
@@ -39,3 +40,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default Posts;

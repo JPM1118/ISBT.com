@@ -7,8 +7,9 @@ import spacesIcon from "./4spacesIcon.png";
 import lithosIcon from "./lithosIcon.png";
 import ionaIcon from "./ionaIcon.png";
 import sandersonIcon from "./sandersonIcon.png";
+import lewisandwoodIcon from "./lewisandwoodlogo.png";
 
-export default () => (
+const Title = () => (
   <div className={titleStyle.container}>
     <div className={titleStyle.title}>
       <h1>
@@ -71,6 +72,17 @@ export default () => (
           <img src={sandersonIcon} alt="Ian Sanderson Logo" />
         </a>
       </div>
+      <div className={titleStyle.logo}>
+        <a
+          href="https://www.lewisandwood.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={lewisandwoodIcon} alt="Lewis and Wood Logo" />
+        </a>
+      </div>
     </div>
   </div>
 );
+
+export default Title;

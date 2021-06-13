@@ -1,104 +1,85 @@
-import React, { Component } from "react";
-import { Link } from "gatsby";
+import React from "react";
+// import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 import carouselStyles from "./carousel.module.scss";
 import leftArrow from "./arrowIcons/leftArrow.svg";
 import rightArrow from "./arrowIcons/rightArrow.svg";
 
-const initialState = { currentIndex: 0 };
-export default class carousel extends Component {
-  state = initialState;
-  previousSlide = () => {
-    const lastIndex = this.props.image.length - 1;
-    const { currentIndex } = this.state;
+const Carousel = ({ image, designerName }) => {
+  const initialState = React.useMemo(() => ({ currentIndex: 0 }), []);
+
+  const [state, setState] = React.useState(initialState);
+
+  React.useEffect(() => setState(initialState), [initialState]);
+
+  const previousSlide = () => {
+    const lastIndex = image.length - 1;
+    const { currentIndex } = state;
     const resetIndex = currentIndex === 0;
     const index = resetIndex ? lastIndex : currentIndex - 1;
 
-    this.setState({
-      currentIndex: index
+    setState({
+      currentIndex: index,
     });
   };
-  nextSlide = () => {
-    const lastIndex = this.props.image.length - 1;
-    const { currentIndex } = this.state;
+  const nextSlide = () => {
+    const lastIndex = image.length - 1;
+    const { currentIndex } = state;
     const resetIndex = currentIndex === lastIndex;
     const index = resetIndex ? 0 : currentIndex + 1;
 
-    this.setState({
-      currentIndex: index
+    setState({
+      currentIndex: index,
     });
   };
 
-  currentImage = index => {
-    const { currentIndex } = this.state;
+  const currentImage = (index) => {
+    const { currentIndex } = state;
     return index === currentIndex;
   };
-  componentDidUpdate(prevProps) {
-    if (this.props !== prevProps) {
-      return this.setState(initialState);
-    }
-  }
-  render() {
-    const { image, designerName } = this.props;
-    const renderArrows = () => {
-      return image.length > 1;
-    };
-    const orderedNodes = array => {
-      return array.sort((a, b) => (a.node.name > b.node.name ? 1 : -1));
-    };
-    const orderImages = orderedNodes(image);
-    return (
-      <div className={carouselStyles.container}>
-        {renderArrows() ? (
-          <>
-            <div
-              className={carouselStyles.arrowLeft}
-              onClick={this.previousSlide}
-            >
-              <img src={leftArrow} alt="previous slide" />
-            </div>
-            <div className={carouselStyles.arrowRight} onClick={this.nextSlide}>
-              <img src={rightArrow} alt="next slide" />
-            </div>
-          </>
-        ) : null}
-        {/* <div className={carouselStyles.overlay}>
-          <div className={carouselStyles.textWrapper}>
-            For memo requests and quotes, please use the contact form in the{' '}
-            <Link className={carouselStyles.aboutLink} to='/about/'>About Page</Link> or email:{' '}
-            <span className={carouselStyles.email} >
-              Barbara@interiorsourcesbtodd.com
-            </span>
-          </div>
-        </div> */}
-        <div className={carouselStyles.imgSlide}>
-          <Img
-            fluid={
-              orderImages[this.state.currentIndex].node.childImageSharp.fluid
-            }
-            alt={designerName}
-          />
-        </div>
-        {/* <div className={carouselStyles.link}>
-          <a href={this.designerLink()} target="_blank" rel='noreferrer noopener'>{this.designerLink()}</a>
-        </div> */}
-        <ul className={carouselStyles.imageList}>
-          {image.map((box, idx) => {
-            return (
-              <li key={idx}>
-                <div
-                  className={carouselStyles.imageBox}
-                  id={idx}
-                  style={
-                    this.currentImage(idx) ? { background: "white" } : null
-                  }
-                />
-              </li>
-            );
-          })}
-        </ul>
+
+  const renderArrows = () => {
+    return image.length > 1;
+  };
+  const orderedNodes = (array) => {
+    return array.sort((a, b) => (a.node.name > b.node.name ? 1 : -1));
+  };
+  const orderImages = orderedNodes(image);
+  return (
+    <div className={carouselStyles.container}>
+      {renderArrows() ? (
+        <>
+          <button className={carouselStyles.arrowLeft} onClick={previousSlide}>
+            <img src={leftArrow} alt="previous slide" />
+          </button>
+          <button className={carouselStyles.arrowRight} onClick={nextSlide}>
+            <img src={rightArrow} alt="next slide" />
+          </button>
+        </>
+      ) : null}
+
+      <div className={carouselStyles.imgSlide}>
+        <Img
+          fluid={orderImages[state.currentIndex].node.childImageSharp.fluid}
+          alt={designerName}
+        />
       </div>
-    );
-  }
-}
+
+      <ul className={carouselStyles.imageList}>
+        {image.map((box, idx) => {
+          return (
+            <li key={idx}>
+              <div
+                className={carouselStyles.imageBox}
+                id={idx}
+                style={currentImage(idx) ? { background: "white" } : null}
+              />
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+export default Carousel;
