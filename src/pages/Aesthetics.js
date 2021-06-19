@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import DesignerPageLayout from "../components/designerPageLayout/DesignerPageLayout";
 
-export default () => {
+const Aesthetics = () => {
   const data = useStaticQuery(graphql`
     query {
       aesthetics: allFile(filter: { name: { eq: "aw" } }) {
@@ -21,3 +21,5 @@ export default () => {
     />
   );
 };
+
+export default Aesthetics;

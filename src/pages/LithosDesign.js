@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import DesignerPageLayout from "../components/designerPageLayout/DesignerPageLayout";
 
-export default () => {
+const LithosDesign = () => {
   const designer = "lithos";
   const designerName = "Lithos Design";
   const data = useStaticQuery(graphql`
@@ -20,3 +20,4 @@ export default () => {
     />
   );
 };
+export default LithosDesign;

@@ -1,4 +1,4 @@
-@import './../../utils/variables.scss';
+@import "./../../utils/variables.scss";
 
 .header {
   background-color: $charcoal;
@@ -19,7 +19,7 @@
   display: grid;
   grid-template: 100% / 20% 80%;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .header {
     background-color: $charcoal;
     height: $header-height;
@@ -52,7 +52,7 @@
     width: 24px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .burgerMenu {
     display: none;
   }
@@ -66,7 +66,7 @@
   // max-width: 700px;
   margin: 0 0;
   text-align: center;
-  background-color: rgba(70, 70, 70, .6);
+  background-color: rgba(70, 70, 70, 0.6);
   li {
     color: white;
     display: block;
@@ -84,7 +84,7 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .linkGroup {
     align-self: center;
     justify-self: right;
@@ -112,8 +112,8 @@
   }
 }
 
-.italics{
-  a{
+.italics {
+  a {
     font-style: italic;
   }
 }

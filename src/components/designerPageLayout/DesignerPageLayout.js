@@ -5,10 +5,9 @@ import Carousel from "../carousel/carousel";
 import repLineStyles from "./designerPageStyles.module.scss";
 import LinkAddress from "../linkAddress/LinkAddress";
 
-export default props => {
+const DesignerPageLayout = (props) => {
   const { designer, designerName, data } = props;
 
-  debugger;
   return (
     <Layout>
       <div className={repLineStyles.container}>
@@ -23,3 +22,5 @@ export default props => {
     </Layout>
   );
 };
+
+export default DesignerPageLayout;

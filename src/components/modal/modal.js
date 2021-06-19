@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'gatsby';
+import React from "react";
+import { Link } from "gatsby";
 
-import modalStyles from './modal.module.scss';
+import modalStyles from "./modal.module.scss";
 
 export default class Modal extends Component {
   state = { display: true };
@@ -14,14 +14,14 @@ export default class Modal extends Component {
     return (
       <div
         className={modalStyles.wrapper}
-        style={!display ? { display: 'none' } : null}
+        style={!display ? { display: "none" } : null}
       >
         <div className={modalStyles.content}>
           <div className={modalStyles.text}>
             <p>
-              For memo requests and quotes, please use the{' '}
-              <Link to='/contact/'>Contact Page</Link> or email:{' '}
-              <span style={{ fontStyle: 'italic' }}>
+              For memo requests and quotes, please use the{" "}
+              <Link to="/contact/">Contact Page</Link> or email:{" "}
+              <span style={{ fontStyle: "italic" }}>
                 Barbara@interiorsourcesbtodd.com
               </span>
             </p>
